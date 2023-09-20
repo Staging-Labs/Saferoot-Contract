@@ -1,0 +1,58 @@
+{
+  "name": "saferoot-contract",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "blockchain": "npx hardhat node",
+    "test": "npx hardhat test",
+    "deploy-goerli": "npx hardhat deploy --network goerli --tags SaferootFactory",
+    "deploy-mainnet": "npx hardhat deploy --network mainnet --tags SaferootFactory",
+    "solc-saferoot": "npx solc --include-path node_modules/ --base-path . --abi contracts/Saferoot.sol -o build",
+    "abigen-saferoot": "abigen --abi build/contracts_Saferoot_sol_Saferoot.abi --pkg bindings --type Saferoot --out dist/bindings/Saferoot.go",
+    "solc-saferoot-factory": "npx solc --include-path node_modules/ --base-path . --abi contracts/SaferootFactory.sol -o build",
+    "abigen-saferoot-factory": "abigen --abi build/contracts_SaferootFactory_sol_SaferootFactory.abi --pkg bindings --type SaferootFactory --out dist/bindings/SaferootFactory.go"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Staging-Labs/SafeRoot-Contract.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Staging-Labs/SafeRoot-Contract/issues"
+  },
+  "homepage": "https://github.com/Staging-Labs/SafeRoot-Contract#readme",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^1.0.2",
+    "@nomiclabs/hardhat-ethers": "^2.2.3",
+    "@nomiclabs/hardhat-etherscan": "^3.1.7",
+    "@types/jest": "^29.5.0",
+    "eslint": "^8.36.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "ethers": "^5.7.2",
+    "hardhat": "^2.12.7",
+    "hardhat-deploy": "^0.11.25",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.2"
+  },
+  "dependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^1.0.6",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.8",
+    "@openzeppelin/contracts": "^4.8.2",
+    "@typechain/ethers-v5": "^10.2.0",
+    "@typechain/hardhat": "^6.1.5",
+    "chai": "^4.3.7",
+    "dotenv": "^16.0.3",
+    "hardhat-gas-reporter": "^1.0.2",
+    "solc": "^0.8.19",
+    "solidity-coverage": "^0.7.22",
+    "typechain": "^8.1.1"
+  }
+}
