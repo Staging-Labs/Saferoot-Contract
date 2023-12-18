@@ -2,6 +2,11 @@ const networkConfig: any = {
   31337: {
     name: "localhost",
   },
+  11155111: {
+    name: "sepolia",
+    SaferootFactory: "",
+    SaferootImplementation: "",
+  },
   5: {
     name: "goerli",
     SaferootFactory: "",

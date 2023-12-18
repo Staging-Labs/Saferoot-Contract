@@ -22,12 +22,19 @@ const config: HardhatUserConfig = {
         process.env.DEPLOYER_PRIVATE_KEY !== undefined ? [process.env.DEPLOYER_PRIVATE_KEY] : [],
       chainId: 5,
     },
+    sepolia: {
+      url: process.env.RPC_SEPOLIA_URL || "",
+      accounts:
+        process.env.DEPLOYER_PRIVATE_KEY !== undefined ? [process.env.DEPLOYER_PRIVATE_KEY] : [],
+      chainId: 11155111,
+    },
   },
   namedAccounts: {
     deployer: {
       hardhat: 0,
       mainnet: 0,
       goerli: 0,
+      sepolia: 0,
     }
   },
   solidity: {
