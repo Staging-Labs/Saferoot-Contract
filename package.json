@@ -8,6 +8,7 @@
     "test": "npx hardhat test",
     "deploy-goerli": "npx hardhat deploy --network goerli --tags SaferootFactory",
     "deploy-mainnet": "npx hardhat deploy --network mainnet --tags SaferootFactory",
+    "deploy-sepolia": "npx hardhat deploy --network sepolia --tags SaferootFactory",
     "solc-saferoot": "npx solc --include-path node_modules/ --base-path . --abi contracts/Saferoot.sol -o build",
     "abigen-saferoot": "abigen --abi build/contracts_Saferoot_sol_Saferoot.abi --pkg bindings --type Saferoot --out dist/bindings/Saferoot.go",
     "solc-saferoot-factory": "npx solc --include-path node_modules/ --base-path . --abi contracts/SaferootFactory.sol -o build",
